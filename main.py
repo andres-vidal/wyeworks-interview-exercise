@@ -55,9 +55,9 @@ if __name__ == "__main__":
 
     threads = []
 
-    for decade, albums in reversed(discography.items()):
+    for index, (decade, albums) in enumerate(discography.items()):
 
-        list_id = trello.create_list(f"{decade}'s", board_id)
+        list_id = trello.create_list(f"{decade}'s", board_id, index+1)
 
         for album in albums:
 

@@ -37,13 +37,14 @@ def create_board(name):
     return request(post, target, params).json()["id"]
 
 
-def create_list(name, board_id):
+def create_list(name, board_id, position):
 
     target = f"{TRELLO_API}/lists"
 
     params = {
         "name": name,
         "idBoard": board_id,
+        "pos": position,
         "key": TRELLO_CLIENT_ID,
         "token": TRELLO_ACCESS_TOKEN
     }
