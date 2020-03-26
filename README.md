@@ -17,4 +17,4 @@ https://developer.spotify.com/documentation/general/guides/authorization-guide/#
 ---
 
 Execute `python3 main.py` in root folder.
-Optional argument `-d` deletes previously generated boards (with "Bob Dylan Discography" in their name).
+Optional argument `-d` deletes previously generated boards (with "Bob Dylan Discography" in their name) before creating the new one.
