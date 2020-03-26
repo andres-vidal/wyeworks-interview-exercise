@@ -1,5 +1,9 @@
 # wyeworks-interview-exercise
 
+This app reads a `discography.txt` file containing data about Bob Dylan's Discography, searches for the albums' cover arts in Spotify and creates a board in Trello in which the discography is organized.
+
+---
+
 Create trello/credentials.json and set the properties `TRELLO_CLIENT_ID` and `RELLO_ACCESS_TOKEN`
 
 **Server Token**
