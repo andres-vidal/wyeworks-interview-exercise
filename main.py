@@ -42,16 +42,9 @@ def fetch_and_set_cover_art(album, card_id):
         trello.set_card_cover(card_id, attachment_id)
 
 
-if __name__ == "__main__":
+def create_discography_board(board_name, discography):
 
-    base_board_name = "Bob Dylan Discography"
-
-    if len(sys.argv) > 1 and sys.argv[1] == "-d":
-        trello.delete_boards(base_board_name)
-
-    discography = parse_discography()
-
-    board_id = trello.create_board(f"{base_board_name} {datetime.now()}")
+    board_id = trello.create_board(board_name)
 
     threads = []
 
@@ -70,3 +63,16 @@ if __name__ == "__main__":
 
     for t in threads:
         t.join()
+
+
+if __name__ == "__main__":
+
+    base_board_name = "Bob Dylan Discography"
+
+    if len(sys.argv) > 1 and sys.argv[1] == "-d":
+        trello.delete_boards(base_board_name)
+
+    board_name = f"{base_board_name} {datetime.now()}"
+
+    discography = parse_discography()
+    create_discography_board(board_name, discography)
