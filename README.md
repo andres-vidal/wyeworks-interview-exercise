@@ -1,6 +1,6 @@
 # wyeworks-interview-exercise
 
-This app reads a `discography.txt` file containing data about Bob Dylan's Discography, searches for the albums' cover arts in Spotify and creates a board in Trello in which the discography is organized.
+This app reads a `discography.txt` file containing data about Bob Dylan's Discography, searches for the albums' cover arts in Spotify and creates a board in Trello in which the discography is organized. Each list of the board corresponds to a decade, and each card in a list corresponds to an album released in that decade. Both the lists and the albums within a list are sorted chronologically (in the case of the albums, by release year). Those albums released in the same year are sorted alphabetically by name. Those cards corresponding to albums that could not be found in Spotify do not display a cover image.
 
 ---
 
